@@ -1,0 +1,12 @@
+import { forEachTrailingCommentRange } from "typescript";
+
+const fontSizes: any = [12, 14, 16, 20, 24, 32];
+
+fontSizes.extraSmall = fontSizes[0];
+fontSizes.small = fontSizes[1];
+fontSizes.midium = fontSizes[2];
+fontSizes.midiumLarge = fontSizes[3];
+fontSizes.large = fontSizes[4];
+fontSizes.extraLarge = fontSizes[5];
+
+export default fontSizes;
