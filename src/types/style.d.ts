@@ -36,7 +36,8 @@ export type CSSPropertyAlignItems =
   | SelfPosition
   | "baseline"
   | "normal"
-  | "stretch";
+  | "stretch"
+  | (string & {});
 
 export type CSSPropertyJustifyItems =
   | CSSPrropertyGlobals
@@ -46,7 +47,8 @@ export type CSSPropertyJustifyItems =
   | "legacy"
   | "normal"
   | "right"
-  | "stretch";
+  | "stretch"
+  | (string & {});
 
 export type CSSPropertyJustifyContent =
   | CSSPrropertyGlobals
@@ -54,7 +56,8 @@ export type CSSPropertyJustifyContent =
   | ContentPosition
   | "left"
   | "normal"
-  | "right";
+  | "right"
+  | (string & {});
 
 export type CSSPropertyFlexWrap =
   | CSSPropertyGlobals
@@ -77,7 +80,8 @@ export type CSSPropertyJustifySelf =
   | "left"
   | "normal"
   | "right"
-  | "stretch";
+  | "stretch"
+  | (string & {});
 
 export type CSSPropertyAlignSelf =
   | CSSPrropertyGlobals
