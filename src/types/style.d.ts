@@ -39,6 +39,18 @@ export type CSSPropertyAlignItems =
   | "stretch"
   | (string & {});
 
+export type CSSPropertyAlignContent =
+  | CSSPrropertyGlobals
+  | ContentDistribution
+  | "center"
+  | "end"
+  | "flex-end"
+  | "flex-start"
+  | "start"
+  | "baseline"
+  | "normal"
+  | (string & {});
+
 export type CSSPropertyJustifyItems =
   | CSSPrropertyGlobals
   | SelfPosition
