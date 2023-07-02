@@ -5,7 +5,7 @@ export type Responsive<T> = {
   lg?: T;
   xl?: T;
 };
-export type ResponsiveProps<T> = T | Responsive<T>;
+export type ResponsiveProp<T> = T | Responsive<T>;
 
 type SelfPosition =
   | "center"
