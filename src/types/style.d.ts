@@ -1,11 +1,11 @@
-export type Responsive<T> = {
+export type ResponsiveProp<T> = {
   base?: T;
   sm?: T;
   md?: T;
   lg?: T;
   xl?: T;
 };
-export type ResponsiveProp<T> = T | Responsive<T>;
+export type Responsive<T> = T | ResponsiveProp<T>;
 
 type SelfPosition =
   | "center"
