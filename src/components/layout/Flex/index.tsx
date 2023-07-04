@@ -29,7 +29,6 @@ type FlexProps = BoxProps & {
 };
 
 const Flex = styled(Box)<FlexProps>`
-  display: "flex";
   ${(props) => toPropValue("alige-items", props.alignItems, props.theme)}
   ${(props) => toPropValue("align-content", props.alignContent, props.theme)}
   ${(props) =>
@@ -44,5 +43,8 @@ const Flex = styled(Box)<FlexProps>`
   ${(props) => toPropValue("align-self", props.alignSelf, props.theme)}
   ${(props) => toPropValue("order", props.order, props.theme)};
 `;
+Flex.defaultProps = {
+  display: "flex",
+};
 
 export default Flex;
