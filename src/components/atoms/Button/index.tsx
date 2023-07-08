@@ -102,7 +102,7 @@ const Button = styled.button<ButtonProps>`
       !backgroundColor &&
         styles.push(
           toPropValue(
-            "backgroundColor",
+            "background-color",
             variants[variant].backgroundColor,
             theme
           )
