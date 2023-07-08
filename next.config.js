@@ -8,14 +8,14 @@ const nextConfig = {
         ? { properties: ["^data-testid$"] }
         : false,
   },
-  async rewrites() {
-    return [
-      {
-        source: `${process.env.NEXT_PUBLIC_API_BASEPATH}/:match*`,
-        destination: `${process.env.API_BASE_URL}/:match*`,
-      },
-    ];
-  },
+  // // async rewrites() {
+  // //   return [
+  // //     {
+  // //       source: `${process.env.NEXT_PUBLIC_API_BASEPATH}/:match*`,
+  // //       destination: `${process.env.API_BASE_URL}/:match*`,
+  // //     },
+  // //   ];
+  // },
 };
 
 module.exports = nextConfig;
