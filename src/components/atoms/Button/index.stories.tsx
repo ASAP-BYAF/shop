@@ -9,7 +9,7 @@ const meta: Meta<typeof Button> = {
   argTypes: {
     variant: {
       options: ["primary", "secondary"],
-      contoal: { type: "radio" },
+      control: { type: "radio" },
       defaultValue: "primary",
       description: "ボタンバリアント",
       table: {
@@ -23,35 +23,34 @@ const meta: Meta<typeof Button> = {
       description: "ボタンテキスト",
       table: {
         type: { summary: "string" },
-        defaultValue: { summary: "primary" },
       },
-      disabled: {
-        control: { type: "boolean" },
-        defaultValue: false,
-        description: "Disabled フラグ",
-        table: {
-          type: { summary: "boolean" },
-        },
-        width: {
-          control: { type: "number" },
-          description: "横幅",
-          table: {
-            type: { summary: "number" },
-          },
-        },
-        heigth: {
-          control: { type: "number" },
-          description: "縦幅",
-          table: {
-            type: { summary: "number" },
-          },
-        },
-        onClick: {
-          description: "onClick イベントハンドラ",
-          table: {
-            type: { summary: "function" },
-          },
-        },
+    },
+    disabled: {
+      control: { type: "boolean" },
+      defaultValue: false,
+      description: "Disabled フラグ",
+      table: {
+        type: { summary: "boolean" },
+      },
+    },
+    width: {
+      control: { type: "number" },
+      description: "横幅",
+      table: {
+        type: { summary: "number" },
+      },
+    },
+    height: {
+      control: { type: "number" },
+      description: "縦幅",
+      table: {
+        type: { summary: "number" },
+      },
+    },
+    onClick: {
+      description: "onClick イベントハンドラ",
+      table: {
+        type: { summary: "function" },
       },
     },
   },
