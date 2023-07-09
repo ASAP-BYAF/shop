@@ -7,6 +7,7 @@ import Button3 from "@/components/atoms/Button3/index";
 import Button4 from "@/components/atoms/Button4/index";
 import Button5 from "@/components/atoms/Button5/index";
 import Button6 from "@/components/atoms/Button6/index";
+import { theme } from "@/themes";
 
 const Page: NextPage = () => {
   return (
@@ -18,6 +19,7 @@ const Page: NextPage = () => {
       <Button2>Button2</Button2>
       <Button3 backgroundColor={"black"}>Button3</Button3>
       <Button3 backgroundColor={"black2"}>Button3</Button3>
+      <Button3 backgroundColor={"black2"}>{theme.colors.black2}</Button3>
       <Button4 backgroundColor={"black"}>Button4</Button4>
       <Button5 variant={"primary"}>Button5</Button5>
       <Button6 variant={"primary"}>Button6</Button6>
