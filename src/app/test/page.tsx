@@ -15,6 +15,7 @@ const Page: NextPage = () => {
       <button>button</button>
       <Button variant={"primary"}>Button</Button>
       <Button variant={"secondary"}>Button</Button>
+      <Button variant={"danger"}>Button</Button>
       <Button>Button</Button>
       <Button2>Button2</Button2>
       <Button3 backgroundColor={"black"}>Button3</Button3>

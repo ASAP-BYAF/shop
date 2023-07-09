@@ -176,16 +176,16 @@ const Button = styled.button<ButtonProps>`
 `;
 
 Button.defaultProps = {
-  // variant: "primary",
-  // paddingLeft: 2,
-  // paddingRight: 1,
-  // paddingTop: 1,
-  // paddingBottom: 1,
-  // color: "white",
-  // display: "inline-block",
-  // textAlign: "center",
-  // lineHeight: "inherit",
-  // fontSize: "inherit",
+  variant: "primary",
+  paddingLeft: 2,
+  paddingRight: 1,
+  paddingTop: 1,
+  paddingBottom: 1,
+  color: "white",
+  display: "inline-block",
+  textAlign: "center",
+  lineHeight: "inherit",
+  fontSize: "inherit",
 };
 
 export default Button;
