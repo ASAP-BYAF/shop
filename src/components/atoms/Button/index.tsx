@@ -8,8 +8,9 @@ import {
   LineHeight,
   Space,
   AppTheme,
-} from "@/util/styles";
+} from "@/utils/styles";
 
+// ボタンのバリアント
 export type ButtonVariant = "primary" | "secondary" | "danger";
 
 export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
@@ -30,14 +31,14 @@ export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   overflow?: Responsive<string>;
   margin?: Responsive<Space>;
   marginTop?: Responsive<Space>;
+  marginRight?: Responsive<Space>;
   marginBottom?: Responsive<Space>;
   marginLeft?: Responsive<Space>;
-  marginRight?: Responsive<Space>;
   padding?: Responsive<Space>;
   paddingTop?: Responsive<Space>;
+  paddingRight?: Responsive<Space>;
   paddingBottom?: Responsive<Space>;
   paddingLeft?: Responsive<Space>;
-  paddingRight?: Responsive<Space>;
   pseudoClass?: {
     hover?: {
       backgroundColor?: Responsive<Color>;
@@ -50,6 +51,7 @@ export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
 };
 
 const variants = {
+  // プライマリ
   primary: {
     color: "white",
     backgroundColor: "primary",
@@ -63,6 +65,7 @@ const variants = {
       },
     },
   },
+  // セカンダリ
   secondary: {
     color: "white",
     backgroundColor: "secondary",
@@ -76,6 +79,7 @@ const variants = {
       },
     },
   },
+  // デンジャー
   danger: {
     color: "white",
     backgroundColor: "danger",
@@ -91,8 +95,13 @@ const variants = {
   },
 };
 
+/**
+ * ボタン
+ * バリアント、色、タイポグラフィ、レイアウト、スペース関連のPropsを追加
+ */
 const Button = styled.button<ButtonProps>`
   ${({ variant, color, backgroundColor, pseudoClass, theme }) => {
+    // バリアントのスタイルの適用
     if (variant && variants[variant]) {
       const styles = [];
       !color &&
@@ -143,13 +152,13 @@ const Button = styled.button<ButtonProps>`
   ${(props) => toPropValue("overflow", props.overflow, props.theme)}
   ${(props) => toPropValue("margin", props.margin, props.theme)}
   ${(props) => toPropValue("margin-top", props.marginTop, props.theme)}
-  ${(props) => toPropValue("margin-bottom", props.marginBottom, props.theme)}
   ${(props) => toPropValue("margin-left", props.marginLeft, props.theme)}
+  ${(props) => toPropValue("margin-bottom", props.marginBottom, props.theme)}
   ${(props) => toPropValue("margin-right", props.marginRight, props.theme)}
   ${(props) => toPropValue("padding", props.padding, props.theme)}
   ${(props) => toPropValue("padding-top", props.paddingTop, props.theme)}
-  ${(props) => toPropValue("padding-bottom", props.paddingBottom, props.theme)}
   ${(props) => toPropValue("padding-left", props.paddingLeft, props.theme)}
+  ${(props) => toPropValue("padding-bottom", props.paddingBottom, props.theme)}
   ${(props) => toPropValue("padding-right", props.paddingRight, props.theme)}
   &:hover {
     ${(props) =>
@@ -170,13 +179,13 @@ const Button = styled.button<ButtonProps>`
   text-decoration: "none";
   opacity: ${({ disabled }) => (disabled ? "0.5" : "1")};
   border-radius: 4px;
-  border: "none";
+  border: none;
 `;
 
 Button.defaultProps = {
   variant: "primary",
   paddingLeft: 2,
-  paddingRight: 1,
+  paddingRight: 2,
   paddingTop: 1,
   paddingBottom: 1,
   color: "white",

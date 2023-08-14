@@ -8,7 +8,7 @@ import {
   LineHeight,
   Space,
   AppTheme,
-} from "@/util/styles";
+} from "@/utils/styles";
 
 export type ButtonVariant = "primary" | "secondary";
 

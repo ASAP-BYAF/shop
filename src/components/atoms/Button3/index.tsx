@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Responsive } from "@/types/style";
-import { toPropValue, Color, AppTheme } from "@/util/styles";
+import { toPropValue, Color, AppTheme } from "@/utils/styles";
 
 export type ButtonVariant = "primary" | "secondary" | "danger";
 
