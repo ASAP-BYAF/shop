@@ -7,7 +7,7 @@ import type {
   CSSPropertyGridColumn,
   CSSPropertyGridRow,
 } from "@/types/style";
-import { toPropValue } from "@/util/styles";
+import { toPropValue } from "@/utils/styles";
 
 type GridProps = BoxProps & {
   gridGap?: Responsive<string>;

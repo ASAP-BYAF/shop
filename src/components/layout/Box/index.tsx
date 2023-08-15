@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import type { Responsive } from "@/types/style";
-import { toPropValue, Color, Space, AppTheme } from "@/util/styles";
+import { toPropValue, Color, Space, AppTheme } from "@/utils/styles";
 
 export type BoxProps = {
   color?: Responsive<Color>;
