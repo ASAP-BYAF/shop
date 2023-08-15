@@ -79,7 +79,7 @@ export type CSSPropertyFlexWrap =
 
 export type CSSPropertyFlexDirection =
   | CSSPrropertyGlobals
-  | "columun"
+  | "column"
   | "column-reverse"
   | "row"
   | "row-reverse";
