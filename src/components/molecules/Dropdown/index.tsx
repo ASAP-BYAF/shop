@@ -64,6 +64,7 @@ const DropdownMenu = styled.div`
   width: 100%;
   z-index: 10000;
 `;
+
 const DropdownOption = styled.div`
   padding: 8px 12px 8px 12px;
   &:hover {
@@ -130,9 +131,7 @@ const Dropdown = (props: DropdownProps) => {
   };
 
   const handleSelectValue = (
-    // e: React.FormEvent<HTMLDivElement>,
-    // e: React.FormEvent<HTMLDivElement>,
-    e: any,
+    e: React.FormEvent<HTMLDivElement>,
     item: DropdownItem
   ) => {
     e.stopPropagation();
@@ -176,19 +175,19 @@ const Dropdown = (props: DropdownProps) => {
         />
         <DropdownArrow isOpen={isOpen} />
       </DropdownControl>
-      {/* {isOpen && (
-        // <DropdownMenu>
-        //   {props.options.map((item, idx) => (
-        //     <DropdownOption
-        //       key={idx}
-        //       onMouseDown={(e) => handleSelectValue(e, item)}
-        //       onClick={(e) => handleSelectValue(e, item)}
-        //     >
-        //       <DropdownItem item={item} />
-        //     </DropdownOption>
-        //   ))}
-        // </DropdownMenu>
-      )} */}
+      {isOpen && (
+        <DropdownMenu>
+          {props.options.map((item, idx) => (
+            <DropdownOption
+              key={idx}
+              onMouseDown={(e) => handleSelectValue(e, item)}
+              onClick={(e) => handleSelectValue(e, item)}
+            >
+              <DropdownItem item={item} />
+            </DropdownOption>
+          ))}
+        </DropdownMenu>
+      )}
     </DropdownRoot>
   );
 };
