@@ -30,6 +30,7 @@ export function toPropValue<T>(
 ) {
   if (prop === undefined) return undefined;
 
+  // レスポンシブデザインを作る
   if (isResponsivePropType(prop)) {
     const result = [];
     for (const responsiveKey in prop) {
@@ -56,6 +57,7 @@ export function toPropValue<T>(
         result.push(`@media screen and (min-width: ${breakpoint}) {${style}}`);
       }
     }
+    // レスポンシブではない装飾を作る
     return result.join("\n");
   }
 
@@ -80,6 +82,8 @@ const FONT_SIZE_KEYS = new Set(["font-size"]);
 const LETTER_SPACING_KEYS = new Set(["letter-spacing"]);
 const LINE_HIEGHT_KEYS = new Set(["line-height"]);
 
+// プロパティと値がともにテーマに存在すれば、対応する値を返す
+// なければ受け取った値そのものを返す。
 function toThemeValueIfNeeded<T>(propKey: string, value: T, theme?: AppTheme) {
   if (
     theme &&
@@ -121,6 +125,9 @@ function toThemeValueIfNeeded<T>(propKey: string, value: T, theme?: AppTheme) {
   return value;
 }
 
+// prop が存在して、オブジェクト型で base, sm(small), md(medium),
+// lg(large), xl(extra large) のいずれかキーと対応する値を持つかを基準に
+// レスポンシブデザインにするかを判定する。
 function isResponsivePropType<T>(prop: any): prop is ResponsiveProp<T> {
   return (
     prop &&
@@ -132,6 +139,7 @@ function isResponsivePropType<T>(prop: any): prop is ResponsiveProp<T> {
   );
 }
 
+// テーマに存在するプロパティについて指定された値に対応する値があるかを調べる。
 function isSpaceThemeKeys(prop: any, theme: AppTheme): prop is SpaceThemeKeys {
   return Object.keys(theme.space).filter((key) => key === prop).length > 0;
 }
