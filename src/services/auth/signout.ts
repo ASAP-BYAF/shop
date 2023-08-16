@@ -1,5 +1,5 @@
-import type { ApiContext } from "@/@/types/data/data";
-import { fetcher } from "@/@/utils/api/api";
+import type { ApiContext } from "@/types/data";
+import { fetcher } from "@/utils/api";
 
 /**
  * 認証API（サインアウト）

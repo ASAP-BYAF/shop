@@ -1,7 +1,7 @@
 // @/types/dataは後ほど定義
-import { ApiContext, User } from "@/@/types/data/data";
+import { ApiContext, User } from "@/types/data";
 // 先ほど定義したsrc/@/utils/api/index.tsから読み込み
-import { fetcher } from "@/@/utils/api/api";
+import { fetcher } from "@/utils/api";
 
 export type SigninParams = {
   /**
