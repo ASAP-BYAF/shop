@@ -1,11 +1,27 @@
-import { ApiContext, User } from "@/types/data";
-import { fetcher } from "@/utils/api";
+// @/types/dataは後ほど定義
+import { ApiContext, User } from "@/@/types/data/data";
+// 先ほど定義したsrc/@/utils/api/index.tsから読み込み
+import { fetcher } from "@/@/utils/api/api";
 
 export type SigninParams = {
+  /**
+   * ユーザー名
+   * サンプルユーザーのユーザー名は "user"
+   */
   username: string;
+  /**
+   * パスワード
+   * サンプルユーザーのパスワードは "password"
+   */
   password: string;
 };
 
+/**
+ * 認証API（サインイン）
+ * @param context APIコンテキスト
+ * @param params パラメータ
+ * @returns ログインユーザー
+ */
 const signin = async (
   context: ApiContext,
   params: SigninParams
@@ -16,7 +32,7 @@ const signin = async (
       method: "POST",
       headers: {
         Accept: "application/json",
-        "Content-type": "application/json",
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(params),
     }
