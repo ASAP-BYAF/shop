@@ -22,7 +22,7 @@ interface ProductFormProps {
   onProductSave?: (data: ProductFormData) => void;
 }
 
-const ProductFrom = ({ onProductSave }: ProductFormProps) => {
+const ProductForm = ({ onProductSave }: ProductFormProps) => {
   const {
     register,
     handleSubmit,
@@ -189,3 +189,5 @@ const ProductFrom = ({ onProductSave }: ProductFormProps) => {
     </form>
   );
 };
+
+export default ProductForm;
