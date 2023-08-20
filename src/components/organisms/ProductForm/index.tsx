@@ -13,8 +13,10 @@ export type ProductFormData = {
   image: FileData[];
   title: string;
   description: string;
-  category: Category;
-  condition: Condition;
+  // category: Category;
+  category: Category | string | number | null;
+  // condition: Condition;
+  condition: Condition | string | number | null;
   price: string;
 };
 
@@ -125,9 +127,9 @@ const ProductForm = ({ onProductSave }: ProductFormProps) => {
                   { value: "book", label: "本" },
                 ]}
                 hasError={!!error}
-                value={value}
+                value={value ?? "shoes"}
                 placeholder="カテゴリを選択してください"
-                // onChange={(v) => onChange(v?.value)}
+                onChange={(v) => onChange(v?.value ?? "shoes")}
               />
             )}
           />
@@ -156,7 +158,7 @@ const ProductForm = ({ onProductSave }: ProductFormProps) => {
               hasError={!!error}
               value={value ?? "used"}
               placeholder="Please select condition"
-              //   onChange={(v) => onChange(v?.value)}
+              onChange={(v) => onChange(v?.value ?? "used")}
             />
           )}
         />
