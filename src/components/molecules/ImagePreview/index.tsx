@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import Flex from "@/components/layout/Flex";
 import { CloseIcon } from "@/components/atoms/IconButton";
-import Image from "next/image";
 
 const ImagePreviewContainer = styled.div`
   position: relative;
@@ -20,10 +19,10 @@ const CloseBox = styled(Flex)`
 `;
 
 interface ImagePreviewProps {
-  src: string;
-  alt: string;
-  height: number;
-  width: number;
+  src?: string;
+  alt?: string;
+  height?: string;
+  width?: string;
   onRemove?: (src: string) => void;
 }
 
@@ -45,7 +44,7 @@ const ImagePreview = ({
   return (
     <ImagePreviewContainer>
       {/* // eslint-disable-next-line react-hooks/exhaustive-deps */}
-      <Image src={src} alt={alt} height={height} width={width} />
+      <img src={src} alt={alt} height={height} width={width} />
       <CloseBox
         alignItems="center"
         justifyContent="center"
